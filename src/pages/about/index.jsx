@@ -1,0 +1,78 @@
+import SectionTitle from "../../components/common/SectionTitle";
+
+import aboutImage from "../../assets/images/about/about.jpg";
+
+function About() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="bg-amber-50 py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionTitle
+            subtitle="About Us"
+            title="Authentic Vietnamese Cuisine"
+            description="We bring traditional Vietnamese flavours together with fresh ingredients and a warm dining experience."
+          />
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-20">
+        <div className="mx-auto grid max-w-7xl gap-12 px-6 md:grid-cols-2 md:items-center">
+          <img
+            src={aboutImage}
+            alt="About our restaurant"
+            className="rounded-xl object-cover"
+          />
+
+          <div>
+            <h2 className="mb-6 text-3xl font-bold">Our Story</h2>
+
+            <p className="mb-4 leading-8 text-gray-600">
+              Founded with a passion for Vietnamese cuisine, our restaurant aims
+              to share authentic flavours and memorable meals with everyone.
+            </p>
+
+            <p className="leading-8 text-gray-600">
+              From traditional recipes to fresh ingredients, every dish is
+              prepared with care and dedication.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-gray-50 py-20">
+        <div className="mx-auto max-w-7xl px-6">
+          <SectionTitle subtitle="Our Values" title="What We Believe In" />
+
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            <div className="rounded-xl bg-white p-8 text-center shadow">
+              <h3 className="mb-3 text-xl font-semibold">Fresh Ingredients</h3>
+
+              <p className="text-gray-600">
+                Quality ingredients create great dishes.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-white p-8 text-center shadow">
+              <h3 className="mb-3 text-xl font-semibold">Authentic Recipes</h3>
+
+              <p className="text-gray-600">
+                Traditional flavours from Vietnam.
+              </p>
+            </div>
+
+            <div className="rounded-xl bg-white p-8 text-center shadow">
+              <h3 className="mb-3 text-xl font-semibold">Warm Service</h3>
+
+              <p className="text-gray-600">Making every guest feel welcome.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export default About;
