@@ -14,9 +14,12 @@ import Menu from "./pages/menu/index.jsx";
 import About from "./pages/about/index.jsx";
 import Contact from "./pages/contact/index.jsx";
 
+import ScrollToTop from "./components/common/ScrollToTop";
+
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

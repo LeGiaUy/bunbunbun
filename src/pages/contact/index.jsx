@@ -17,7 +17,7 @@ function Contact() {
 
       {/* Contact Content */}
       <section className="py-20">
-        <div className="mx-auto max-w-7xl space-y-12 px-6">
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
           <LocationCard
             name="Hoxton"
             address={
@@ -28,6 +28,7 @@ function Contact() {
               </>
             }
             phone="020 7729 6494"
+            phoneTel="+442077296494"
             hours={
               <>
                 Monday-Thursday:
@@ -58,6 +59,7 @@ function Contact() {
               </>
             }
             phone="020 3726 5587"
+            phoneTel="+442037265587"
             hours={
               <>
                 Monday-Thursday:
