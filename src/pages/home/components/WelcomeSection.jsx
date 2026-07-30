@@ -1,5 +1,6 @@
 import Button from "../../../components/common/Button.jsx";
 import welcomeImage from "../../../assets/images/welcome/welcome1.jpg";
+import SectionTitle from "../../../components/common/SectionTitle.jsx";
 import { Link } from "react-router-dom";
 
 function WelcomeSection() {
@@ -12,17 +13,13 @@ function WelcomeSection() {
       />
 
       <div>
-        <p className="mb-2 text-amber-600 font-semibold">Welcome</p>
-
-        <h2 className="mb-6 text-4xl font-bold">
-          Authentic Vietnamese Cuisine
-        </h2>
-
-        <p className="mb-8 leading-8 text-gray-600">
-          Bringing the vibrant flavours of Vietnam to London with fresh
-          ingredients, traditional recipes, and warm hospitality.
-        </p>
-        <div>
+        <SectionTitle
+          align="left"
+          subtitle="Welcome"
+          title="Authentic Vietnamese Cuisine"
+          description="Bringing the vibrant flavours of Vietnam to London with fresh ingredients, traditional recipes and warm hospitality."
+        />
+        <div className="mt-6">
           <Link to="/about">
             <Button>About Us</Button>
           </Link>

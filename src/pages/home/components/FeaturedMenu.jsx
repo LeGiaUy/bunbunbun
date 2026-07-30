@@ -7,6 +7,7 @@ import bunCha from "../../../assets/images/menu/bun-cha.jpg";
 import springRoll from "../../../assets/images/menu/spring-roll.jpg";
 import banhMi from "../../../assets/images/menu/banh-mi.jpg";
 import salad from "../../../assets/images/menu/salad.jpg";
+import SectionTitle from "../../../components/common/SectionTitle";
 
 const featuredDishes = [
   {
@@ -47,25 +48,16 @@ function FeaturedMenu() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-semibold uppercase tracking-widest text-amber-600">
-            Our Specials
-          </p>
-
-          <h2 className="mb-4 text-4xl font-bold">Featured Dishes</h2>
-
-          <p className="mx-auto max-w-2xl text-gray-600">
-            Discover some of our most popular Vietnamese dishes, prepared with
-            fresh ingredients and authentic recipes.
-          </p>
-        </div>
-
+        <SectionTitle
+          subtitle="Our Specials"
+          title="Featured Dishes"
+          description="Discover some of our most popular Vietnamese dishes, prepared with fresh ingredients and authentic recipes."
+        />
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {featuredDishes.map((dish) => (
             <MenuCard key={dish.id} {...dish} />
           ))}
         </div>
-
         <div className="mt-14 text-center">
           <Link to="/menu">
             <Button size="lg">View Full Menu</Button>

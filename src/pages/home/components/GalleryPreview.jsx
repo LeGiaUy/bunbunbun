@@ -2,6 +2,7 @@
 
 // import Button from "../../components/common/Button";
 import GalleryCard from "../../../components/gallery/GalleryCard";
+import SectionTitle from "../../../components/common/SectionTitle";
 
 import gallery1 from "../../../assets/images/gallery/gallery1.jpg";
 import gallery2 from "../../../assets/images/gallery/gallery2.jpg";
@@ -47,18 +48,11 @@ function GalleryPreview() {
   return (
     <section className="py-20">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-14 text-center">
-          <p className="mb-2 font-semibold uppercase tracking-[0.3em] text-amber-600">
-            Gallery
-          </p>
-
-          <h2 className="mb-4 text-4xl font-bold">Moments at BúnBúnBún</h2>
-
-          <p className="mx-auto max-w-2xl text-gray-600">
-            Explore our restaurant, signature dishes and the warm atmosphere
-            that makes every visit memorable.
-          </p>
-        </div>
+        <SectionTitle
+          subtitle="Gallery"
+          title="Moments at Bun Bun Bun"
+          description="Explore our restaurant, signature dishes and the warm atmosphere that makes every visit memorable."
+        />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {galleryImages.map((item) => (
