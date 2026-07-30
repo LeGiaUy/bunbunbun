@@ -9,7 +9,7 @@ import Footer from "./components/layout/Footer.jsx";
 // import Gallery from "./pages/Gallery";
 // import Contact from "./pages/Contact";
 
-import Home from "./pages/Home.jsx";
+import Home from "./pages/home/index.jsx";
 
 function App() {
   return (

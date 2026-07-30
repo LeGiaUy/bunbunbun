@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
+import Button from "../common/Button";
 
 function Header() {
   return (
@@ -11,9 +12,7 @@ function Header() {
 
         <Navbar />
 
-        <button className="rounded bg-amber-600 px-5 py-2 text-white transition hover:bg-amber-700">
-          Book a Table
-        </button>
+        <Button>Book a Table</Button>
       </div>
     </header>
   );

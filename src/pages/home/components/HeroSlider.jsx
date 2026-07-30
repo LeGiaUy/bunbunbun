@@ -5,9 +5,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import banner1 from "../../assets/images/hero/hero1.jpg";
-import banner2 from "../../assets/images/hero/hero2.jpg";
-import banner3 from "../../assets/images/hero/hero3.jpg";
+import banner1 from "../../../assets/images/hero/hero1.jpg";
+import banner2 from "../../../assets/images/hero/hero2.jpg";
+import banner3 from "../../../assets/images/hero/hero3.jpg";
 
 const slides = [
   {

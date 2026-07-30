@@ -1,4 +1,4 @@
-import HeroSlider from "../components/home/HeroSlider.jsx";
+import HeroSlider from "./components/HeroSlider.jsx";
 
 function Home() {
   return (

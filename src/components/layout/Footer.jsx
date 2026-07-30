@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import Button from "../common/Button.jsx";
 
 function Footer() {
   return (
@@ -52,9 +53,7 @@ function Footer() {
             <p>Sun: 12:00–22:30</p>
           </div>
 
-          <button className="mt-6 rounded bg-amber-600 px-5 py-2 text-white hover:bg-amber-700">
-            Order Now
-          </button>
+          <Button className="mt-6">Book a Table</Button>
         </div>
 
         {/* Dalston */}
@@ -73,9 +72,7 @@ function Footer() {
             <p>Sun: 12:00–22:30</p>
           </div>
 
-          <button className="mt-6 rounded bg-amber-600 px-5 py-2 text-white hover:bg-amber-700">
-            Order Now
-          </button>
+          <Button className="mt-6">Book a Table</Button>
         </div>
       </div>
 
