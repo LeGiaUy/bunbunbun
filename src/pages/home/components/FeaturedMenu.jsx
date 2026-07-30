@@ -2,47 +2,11 @@ import { Link } from "react-router-dom";
 
 import MenuCard from "../../../components/menu/MenuCard";
 import Button from "../../../components/common/Button";
-
-import bunCha from "../../../assets/images/menu/bun-cha.jpg";
-import springRoll from "../../../assets/images/menu/spring-roll.jpg";
-import banhMi from "../../../assets/images/menu/banh-mi.jpg";
-import salad from "../../../assets/images/menu/salad.jpg";
 import SectionTitle from "../../../components/common/SectionTitle";
 
-const featuredDishes = [
-  {
-    id: 1,
-    image: bunCha,
-    name: "Bún Chả",
-    description:
-      "Grilled pork served with rice noodles, fresh herbs and dipping sauce.",
-    price: "14.99",
-  },
-  {
-    id: 2,
-    image: salad,
-    name: "Fresh Garden Salad",
-    description:
-      "A refreshing mix of crisp lettuce, cherry tomatoes, cucumber, avocado and house dressing.",
-    price: "11.99",
-  },
+import menu from "../../../data/menu";
 
-  {
-    id: 3,
-    image: springRoll,
-    name: "Fresh Spring Rolls",
-    description: "Rice paper rolls filled with shrimp, herbs and vermicelli.",
-    price: "8.99",
-  },
-  {
-    id: 4,
-    image: banhMi,
-    name: "Bánh Mì",
-    description:
-      "Vietnamese baguette with grilled pork, pickled vegetables and herbs.",
-    price: "10.99",
-  },
-];
+const featuredDishes = menu.slice(0, 4);
 
 function FeaturedMenu() {
   return (

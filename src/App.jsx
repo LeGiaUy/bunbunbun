@@ -10,6 +10,7 @@ import Footer from "./components/layout/Footer.jsx";
 // import Contact from "./pages/Contact";
 
 import Home from "./pages/home/index.jsx";
+import Menu from "./pages/menu/index.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
 
       {/* <main className="min-h-screen">
