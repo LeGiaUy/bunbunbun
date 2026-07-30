@@ -1,4 +1,4 @@
-// import { Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/layout/Header.jsx";
 import Footer from "./components/layout/Footer.jsx";
 
@@ -9,10 +9,15 @@ import Footer from "./components/layout/Footer.jsx";
 // import Gallery from "./pages/Gallery";
 // import Contact from "./pages/Contact";
 
+import Home from "./pages/Home.jsx";
+
 function App() {
   return (
     <>
       <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
 
       {/* <main className="min-h-screen">
         <Routes>
