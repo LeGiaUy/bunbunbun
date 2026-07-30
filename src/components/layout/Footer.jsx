@@ -1,3 +1,5 @@
+import { FaFacebookF, FaInstagram } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
@@ -16,20 +18,19 @@ function Footer() {
               <br />
               hello@bunbunbun.co
             </p>
-
-            <div className="flex gap-4 pt-2">
+            <div className="flex gap-4">
               <a
-                href="https://www.facebook.com/bunldn"
-                className="hover:text-white transition"
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-amber-600"
               >
-                Facebook
+                <FaFacebookF />
               </a>
 
               <a
-                href="https://www.instagram.com/bunldn"
-                className="hover:text-white transition"
+                href="#"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-amber-600"
               >
-                Instagram
+                <FaInstagram />
               </a>
             </div>
           </div>
