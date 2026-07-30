@@ -36,15 +36,15 @@ const features = [
 
 function WhyChooseUs() {
   return (
-    <section className="bg-amber-50 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-amber-50 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           subtitle="Why Choose Us"
           title="More Than Just Great Food"
           description="We combine authentic Vietnamese flavors with fresh ingredients, exceptional service and a warm atmosphere."
         />
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 sm:mt-12 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
           {features.map((feature) => (
             <WhyChooseUsCard
               key={feature.id}

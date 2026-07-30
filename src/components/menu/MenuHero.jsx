@@ -2,8 +2,8 @@ import SectionTitle from "../common/SectionTitle";
 
 function MenuHero() {
   return (
-    <section className="bg-amber-50 py-24">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-amber-50 py-16 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           subtitle="Our Menu"
           title="Discover Our Signature Dishes"

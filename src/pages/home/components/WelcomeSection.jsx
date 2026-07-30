@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 
 function WelcomeSection() {
   return (
-    <section className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 md:grid-cols-2">
+    <section className="mx-auto grid max-w-7xl items-center gap-8 px-4 py-12 sm:gap-12 sm:px-6 sm:py-20 lg:grid-cols-2">
       <img
         src={welcomeImage}
         alt="Restaurant"
-        className="rounded-lg object-cover"
+        className="w-full rounded-lg object-cover"
       />
 
       <div>

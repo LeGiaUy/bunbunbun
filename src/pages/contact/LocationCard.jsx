@@ -4,9 +4,9 @@ const ICON_CLASS = "h-4 w-4 shrink-0 text-amber-500";
 
 function LocationCard({ name, address, phone, phoneTel, hours, mapUrl }) {
   return (
-    <div className="space-y-6 rounded-xl bg-white p-8 shadow">
+    <div className="space-y-5 rounded-xl bg-white p-5 shadow sm:space-y-6 sm:p-8">
       <div>
-        <h3 className="mb-4 text-2xl font-bold">{name}</h3>
+        <h3 className="mb-3 text-xl font-bold sm:mb-4 sm:text-2xl">{name}</h3>
 
         <div className="space-y-3 text-gray-600">
           <p className="flex items-start gap-3">
@@ -36,7 +36,7 @@ function LocationCard({ name, address, phone, phoneTel, hours, mapUrl }) {
           title={`${name} location`}
           src={mapUrl}
           width="100%"
-          height="350"
+        className="h-56 w-full sm:h-72 lg:h-[350px]"
           style={{ border: 0 }}
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

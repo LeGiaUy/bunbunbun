@@ -7,18 +7,33 @@ const links = [
   { name: "Contact", path: "/contact" },
 ];
 
-function Navbar() {
+function Navbar({ mobile = false, onLinkClick, className = "" }) {
+  const listClass = mobile
+    ? "flex flex-col gap-1 px-4 py-4 sm:px-6"
+    : "flex items-center gap-6 lg:gap-8";
+
+  const linkClass = mobile
+    ? "block rounded-lg px-3 py-3 text-lg"
+    : "";
+
   return (
-    <nav>
-      <ul className="flex items-center gap-8">
+    <nav className={className} aria-label="Main navigation">
+      <ul className={listClass}>
         {links.map((link) => (
           <li key={link.path}>
             <NavLink
               to={link.path}
+              onClick={onLinkClick}
               className={({ isActive }) =>
-                isActive
-                  ? "font-semibold text-amber-600"
-                  : "text-gray-700 hover:text-amber-600"
+                [
+                  linkClass,
+                  isActive
+                    ? "font-semibold text-amber-600"
+                    : "text-gray-700 hover:text-amber-600",
+                  mobile && !isActive ? "hover:bg-amber-50" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")
               }
             >
               {link.name}

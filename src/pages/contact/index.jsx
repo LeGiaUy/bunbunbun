@@ -5,8 +5,8 @@ function Contact() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-amber-50 py-24">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="bg-amber-50 py-16 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <SectionTitle
             subtitle="Contact"
             title="Get In Touch With Us"
@@ -16,8 +16,8 @@ function Contact() {
       </section>
 
       {/* Contact Content */}
-      <section className="py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2">
+      <section className="py-12 sm:py-20">
+        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-2">
           <LocationCard
             name="Hoxton"
             address={

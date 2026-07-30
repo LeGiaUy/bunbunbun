@@ -46,15 +46,15 @@ const galleryImages = [
 
 function GalleryPreview() {
   return (
-    <section className="py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           subtitle="Gallery"
           title="Moments at Bun Bun Bun"
           description="Explore our restaurant, signature dishes and the warm atmosphere that makes every visit memorable."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
           {galleryImages.map((item) => (
             <GalleryCard key={item.id} image={item.image} alt={item.alt} />
           ))}

@@ -47,7 +47,7 @@ function FooterLocationColumn({ title, addressLine1, addressLine2, phone, phoneT
         </div>
       </div>
 
-      <Button className="mt-6">Book a Table</Button>
+      <Button className="mt-6 w-full sm:w-auto">Book a Table</Button>
     </div>
   );
 }
@@ -55,7 +55,7 @@ function FooterLocationColumn({ title, addressLine1, addressLine2, phone, phoneT
 function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
-      <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-3">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:grid-cols-2 sm:px-6 sm:py-14 lg:grid-cols-3">
         {/* Brand */}
         <div>
           <h2 className="mb-4 text-2xl font-bold text-white">BúnBúnBún</h2>

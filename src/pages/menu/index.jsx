@@ -9,11 +9,11 @@ function Menu() {
     <>
       <MenuHero />
 
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-6">
+      <section className="py-12 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6">
           {/* <CategoryTabs /> */}
 
-          <div className="mt-12">
+          <div className="mt-8 space-y-12 sm:mt-12 sm:space-y-16">
             <MenuGrid items={menu} />
             <MenuGrid items={menu} />
             <MenuGrid items={menu} />

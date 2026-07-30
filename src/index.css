@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+html {
+  overflow-x: hidden;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 2.25rem !important;
+  height: 2.25rem !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.25rem !important;
+}
+
+@media (min-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 1.5rem !important;
+  }
+}

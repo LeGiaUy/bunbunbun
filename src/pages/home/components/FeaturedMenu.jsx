@@ -10,19 +10,19 @@ const featuredDishes = menu.slice(0, 4);
 
 function FeaturedMenu() {
   return (
-    <section className="bg-gray-50 py-20">
-      <div className="mx-auto max-w-7xl px-6">
+    <section className="bg-gray-50 py-12 sm:py-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <SectionTitle
           subtitle="Our Specials"
           title="Featured Dishes"
           description="Discover some of our most popular Vietnamese dishes, prepared with fresh ingredients and authentic recipes."
         />
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 sm:mt-12 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
           {featuredDishes.map((dish) => (
             <MenuCard key={dish.id} {...dish} />
           ))}
         </div>
-        <div className="mt-14 text-center">
+        <div className="mt-10 text-center sm:mt-14">
           <Link to="/menu">
             <Button size="lg">View Full Menu</Button>
           </Link>

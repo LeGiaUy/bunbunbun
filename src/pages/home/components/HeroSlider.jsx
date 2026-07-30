@@ -38,7 +38,7 @@ function HeroSlider() {
     >
       {slides.map((slide, index) => (
         <SwiperSlide key={index}>
-          <div className="relative h-[600px]">
+          <div className="relative h-[min(70vh,600px)] min-h-[320px] sm:min-h-[420px]">
             <img
               src={slide.image}
               alt={slide.title}
@@ -47,12 +47,19 @@ function HeroSlider() {
 
             <div className="absolute inset-0 bg-black/40" />
 
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white">
-              <h1 className="mb-4 text-5xl font-bold">{slide.title}</h1>
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white sm:px-6">
+              <h1 className="mb-3 max-w-3xl text-3xl font-bold sm:mb-4 sm:text-4xl lg:text-5xl">
+                {slide.title}
+              </h1>
 
-              <p className="mb-8 text-xl">{slide.description}</p>
+              <p className="mb-6 max-w-xl text-base sm:mb-8 sm:text-lg lg:text-xl">
+                {slide.description}
+              </p>
 
-              <button className="rounded bg-amber-600 px-6 py-3 hover:bg-amber-700">
+              <button
+                type="button"
+                className="rounded bg-amber-600 px-5 py-2.5 text-sm hover:bg-amber-700 sm:px-6 sm:py-3 sm:text-base"
+              >
                 Book a Table
               </button>
             </div>
