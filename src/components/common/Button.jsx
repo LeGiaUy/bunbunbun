@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 function Button({
   children,
@@ -26,7 +27,9 @@ function Button({
 
   return (
     <button
-      className={clsx(baseClasses, variants[variant], sizes[size], className)}
+      className={twMerge(
+        clsx(baseClasses, variants[variant], sizes[size], className),
+      )}
       {...props}
     >
       {children}
