@@ -1,5 +1,56 @@
-import { FaFacebookF, FaInstagram } from "react-icons/fa";
+import {
+  FaClock,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaMapMarkerAlt,
+  FaPhone,
+} from "react-icons/fa";
 import Button from "../common/Button.jsx";
+
+const ICON_CLASS = "h-4 w-4 shrink-0 text-amber-500";
+
+const OPENING_HOURS = [
+  "Mon–Thu: 12:00–15:30 & 17:30–22:30",
+  "Fri: 12:00–15:30 & 17:30–23:00",
+  "Sat: 12:00–23:00",
+  "Sun: 12:00–22:30",
+];
+
+function FooterLocationColumn({ title, addressLine1, addressLine2, phone, phoneTel }) {
+  return (
+    <div>
+      <h3 className="mb-4 text-xl font-semibold text-white">{title}</h3>
+
+      <p className="flex items-start gap-3">
+        <FaMapMarkerAlt className={`${ICON_CLASS} mt-1`} aria-hidden />
+        <span>
+          {addressLine1}
+          <br />
+          {addressLine2}
+        </span>
+      </p>
+
+      <p className="mt-3 flex items-center gap-3">
+        <FaPhone className={ICON_CLASS} aria-hidden />
+        <a href={`tel:${phoneTel}`} className="transition hover:text-white">
+          {phone}
+        </a>
+      </p>
+
+      <div className="mt-5 flex gap-3 text-sm leading-6">
+        <FaClock className={`${ICON_CLASS} mt-0.5`} aria-hidden />
+        <div className="space-y-1">
+          {OPENING_HOURS.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
+      </div>
+
+      <Button className="mt-6">Book a Table</Button>
+    </div>
+  );
+}
 
 function Footer() {
   return (
@@ -13,15 +64,25 @@ function Footer() {
             Authentic Vietnamese street food served fresh every day.
           </p>
 
-          <div className="space-y-2">
-            <p>
-              <span className="font-semibold text-white">Email:</span>
-              <br />
-              hello@bunbunbun.co
+          <div className="space-y-4">
+            <p className="flex items-start gap-3">
+              <FaEnvelope className={`${ICON_CLASS} mt-1`} aria-hidden />
+              <span>
+                <span className="font-semibold text-white">Email:</span>
+                <br />
+                <a
+                  href="mailto:hello@bunbunbun.co"
+                  className="transition hover:text-white"
+                >
+                  hello@bunbunbun.co
+                </a>
+              </span>
             </p>
+
             <div className="flex gap-4">
               <a
                 href="#"
+                aria-label="Facebook"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-amber-600"
               >
                 <FaFacebookF />
@@ -29,6 +90,7 @@ function Footer() {
 
               <a
                 href="#"
+                aria-label="Instagram"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 transition hover:bg-amber-600"
               >
                 <FaInstagram />
@@ -37,43 +99,21 @@ function Footer() {
           </div>
         </div>
 
-        {/* Hoxton */}
-        <div>
-          <h3 className="mb-4 text-xl font-semibold text-white">Hoxton</h3>
+        <FooterLocationColumn
+          title="Hoxton"
+          addressLine1="134B Kingsland Road"
+          addressLine2="London, E2 8DY"
+          phone="020 7729 6494"
+          phoneTel="+442077296494"
+        />
 
-          <p>134B Kingsland Road</p>
-          <p>London, E2 8DY</p>
-
-          <p className="mt-3">020 7729 6494</p>
-
-          <div className="mt-5 space-y-1 text-sm leading-6">
-            <p>Mon–Thu: 12:00–15:30 & 17:30–22:30</p>
-            <p>Fri: 12:00–15:30 & 17:30–23:00</p>
-            <p>Sat: 12:00–23:00</p>
-            <p>Sun: 12:00–22:30</p>
-          </div>
-
-          <Button className="mt-6">Book a Table</Button>
-        </div>
-
-        {/* Dalston */}
-        <div>
-          <h3 className="mb-4 text-xl font-semibold text-white">Dalston</h3>
-
-          <p>511 Kingsland Road</p>
-          <p>London, E8 4AR</p>
-
-          <p className="mt-3">020 3726 5587</p>
-
-          <div className="mt-5 space-y-1 text-sm leading-6">
-            <p>Mon–Thu: 12:00–15:30 & 17:30–22:30</p>
-            <p>Fri: 12:00–15:30 & 17:30–23:00</p>
-            <p>Sat: 12:00–23:00</p>
-            <p>Sun: 12:00–22:30</p>
-          </div>
-
-          <Button className="mt-6">Book a Table</Button>
-        </div>
+        <FooterLocationColumn
+          title="Dalston"
+          addressLine1="511 Kingsland Road"
+          addressLine2="London, E8 4AR"
+          phone="020 3726 5587"
+          phoneTel="+442037265587"
+        />
       </div>
 
       <div className="border-t border-gray-800 py-5 text-center text-sm text-gray-400">
